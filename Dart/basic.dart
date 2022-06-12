@@ -8,6 +8,7 @@ void main() {
   print("My name is: $name");
 
   final c = a + 5;
+  // const c = a + 5; //error
   print("Updated value of a is: $c");
 
   String number = "123";
@@ -28,6 +29,7 @@ void main() {
   var names = 'fahad';
   int aa = 10;
   var bb = a.toString();
+
   bb += "15";
   aa += 15;
   name = name.toUpperCase();
