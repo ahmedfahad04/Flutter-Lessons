@@ -27,6 +27,7 @@ void main() {
   // LIST & STRING---------------------------------------------------------------
   var ls;
   var ls2 = [1, ...?ls]; // ...?ls is null aware-spread operator
+  List<String> myname = ["Istiaq", "Ahmed", "Fahad"];
   var arr = {1, 2, 4, "Fahad"};
   var names = 'fahad';
   int aa = 10;
@@ -78,10 +79,26 @@ void main() {
     return a + b;
   }
 
+  // short hand function (for single line expression)
+  bool isEmpty(var list) => list.length == 0;
+
+  result(String name, [int? age = 5]) {
+    print("Name is: $name");
+    if (age != null) print("Age is: $age");
+  }
+
+  printElements(List<String> ls) {
+    for (var a in ls) {
+      print("-> $a");
+    }
+  }
+
   test();
+
   var x = summation("ahmed", "fahad");
   print("Summation is: $x");
 
+<<<<<<< HEAD
   // STDIN-STDOUT---------------------------------------------------------------
 
   print("Tell me about yourself:- "); // add an extra newline by default
@@ -94,4 +111,13 @@ void main() {
   print("You are $userage years old");
 
 
+=======
+  var status = isEmpty(ls2);
+  print("Is list empty? $status");
+
+  result("Arshad");
+  result("Arshad", 25);
+
+  printElements(myname);
+>>>>>>> 07eda0ac769ecb91d59a73feaf8770bb1ef2c925
 }
