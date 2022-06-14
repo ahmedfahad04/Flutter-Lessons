@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   // basic and built-in data types
   int a = 10;
@@ -79,4 +81,17 @@ void main() {
   test();
   var x = summation("ahmed", "fahad");
   print("Summation is: $x");
+
+  // STDIN-STDOUT---------------------------------------------------------------
+
+  print("Tell me about yourself:- "); // add an extra newline by default
+  stdout.write("Enter your name: "); // print in a single line
+  String? user = stdin.readLineSync();
+  print("Hello $user, Nice to meet you!");
+
+  stdout.write("Enter your age: ");
+  int? userage = int.parse(stdin.readLineSync()!); // don't forget to add !. Here ? and ! are both used for null safety
+  print("You are $userage years old");
+
+
 }

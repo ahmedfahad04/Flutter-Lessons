@@ -1,0 +1,48 @@
+
+============================================ LINUX ============================================
+
+Issue #1: Could not locate aapt. Please ensure you have the Android buildtools installed.
+Solution: 
+
+	Firstly: Delete everythind you have in your ~/Android/Sdk/build-tools folder
+	Secondly: Re-install the build-tools from android studio in "Sdk Manager"->"Android Api 33" and "Android SDK Command-line Tools" under "SDK Tools" Tab -> Click Apply
+	Thirdly: The execute the following commands in terminal -
+
+		flutter config --android-sdk <path-to-your-android-sdk-path>
+		flutter doctor --android-licenses
+		flutter doctor -v
+	
+	
+	If the output is as follows then you're good to go :)
+	[✓] Flutter (Channel stable, 3.0.2, on Ubuntu 21.04 5.11.0-49-generic, locale en_US.UTF-8)
+	[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+	[✗] Chrome - develop for the web (Cannot find Chrome executable at google-chrome)
+    	! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+	[✓] Linux toolchain - develop for Linux desktop
+	[✓] Android Studio (version 2021.1)
+	[✓] Android Studio
+	[✓] VS Code
+	[✓] Connected device (1 available)
+	[✓] HTTP Host Availability
+	
+	N:B: Ignore the chrome issue. It's not a mandatory point to care about. 
+
+
+Issue #2: How to install android-sdk in linux?
+Solution:
+	
+	Fristly: Execute the commands in terminal-
+	
+		sudo apt update
+		sudo apt install android-sdk
+
+	The location of Android SDK on Linux can be any of the following:
+
+	    /home/AccountName/Android/Sdk
+
+	    /usr/lib/android-sdk
+
+	    /Library/Android/sdk/
+
+	    /Users/[USER]/Library/Android/sdk
+
