@@ -45,4 +45,12 @@ Solution:
 	    /Library/Android/sdk/
 
 	    /Users/[USER]/Library/Android/sdk
+	    
+	    
+Issue #3: Flutter widget test fails with NO MediaQuery widget found
+Solution: 
+	
+	Wrap the Scaffold class around MaterialApp()
+	
+	
 
