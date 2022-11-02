@@ -3,11 +3,12 @@ import 'dart:io';
 void main() {
   // basic and built-in data types
   int a = 10;
-  var b = 20.54;
+  dynamic b = 20.54;
   String name = "Istiaq Ahmed Fahad";
   print(a);
   print(b);
   print("My name is: $name");
+  print(name);
 
   final c = a + 5;
   // const c = a + 5; //error
@@ -16,8 +17,7 @@ void main() {
   String number = "123";
   var value = int.parse(number);
   var modifiedValue = value + 1;
-  print(
-      "Integer version of number is: $value and it's modified value is: $modifiedValue");
+  print("Integer version of number is: $value and it's modified value is: $modifiedValue");
 
   if (value.isOdd)
     print("$value is odd number");
@@ -28,7 +28,7 @@ void main() {
   var ls;
   var ls2 = [1, ...?ls]; // ...?ls is null aware-spread operator
   List<String> myname = ["Istiaq", "Ahmed", "Fahad"];
-  var arr = {1, 2, 4, "Fahad"};
+  dynamic arr = {1, 2, 4, "Fahad"};
   var names = 'fahad';
   int aa = 10;
   var bb = a.toString();
@@ -98,7 +98,6 @@ void main() {
   var x = summation("ahmed", "fahad");
   print("Summation is: $x");
 
-<<<<<<< HEAD
   // STDIN-STDOUT---------------------------------------------------------------
 
   print("Tell me about yourself:- "); // add an extra newline by default
@@ -107,11 +106,10 @@ void main() {
   print("Hello $user, Nice to meet you!");
 
   stdout.write("Enter your age: ");
-  int? userage = int.parse(stdin.readLineSync()!); // don't forget to add !. Here ? and ! are both used for null safety
+  int? userage = int.parse(stdin
+      .readLineSync()!); // don't forget to add !. Here ? and ! are both used for null safety
   print("You are $userage years old");
 
-
-=======
   var status = isEmpty(ls2);
   print("Is list empty? $status");
 
@@ -119,5 +117,4 @@ void main() {
   result("Arshad", 25);
 
   printElements(myname);
->>>>>>> 07eda0ac769ecb91d59a73feaf8770bb1ef2c925
 }
