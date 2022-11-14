@@ -30,7 +30,7 @@ class _AuthorCardState extends State<AuthorCard> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           CircleImage(imageProvider: widget.imageProvider, imageRadius: 28,),
-          const SizedBox(width: 8,),
+          const SizedBox(width: 10,),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -53,53 +53,10 @@ class _AuthorCardState extends State<AuthorCard> {
                 isSelected ? Icons.favorite_border: Icons.favorite,
                 color: isSelected? Colors.white:Colors.red,
             ),
-            iconSize: 30,
+            iconSize: 29,
           ),
         ],
       ),
     );
   }
 }
-
-//
-// class AuthorCard extends StatelessWidget {
-//  
-//
-//   const AuthorCard({
-//     Key? key,
-//     required this.authorName,
-//     required this.title,
-//     required this.imageProvider,
-//     required this.isSelected,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: const EdgeInsets.all(16),
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//         children: <Widget>[
-//           CircleImage(imageProvider: imageProvider, imageRadius: 28,),
-//           const SizedBox(width: 8,),
-//           Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: <Widget>[
-//               Text(authorName, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
-//               Text(title, style: TextStyle(fontSize: 15, color: Colors.white)),
-//             ],
-//           ),
-//           const SizedBox(width: 25,),
-//           IconButton(
-//             onPressed: () {
-//               const snackBar = SnackBar(content: Text('Press Favorite', style: TextStyle(color: Colors.black)),backgroundColor: Colors.white,);
-//               ScaffoldMessenger.of(context).showSnackBar(snackBar);
-//             },
-//             icon: const Icon(Icons.favorite_border, color: Colors.white),
-//             iconSize: 30,
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }

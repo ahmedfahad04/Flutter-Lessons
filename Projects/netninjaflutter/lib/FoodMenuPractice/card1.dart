@@ -12,14 +12,13 @@ class Card1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(18),
         constraints: const BoxConstraints.expand(width: 350, height: 450),
         decoration: const BoxDecoration(
-          // color: Colors.blueGrey,
+          color: Color(0x556776FF),
           image: DecorationImage(
-            image: AssetImage('images/sushi.jpg'),
-            fit: BoxFit.cover,
+            image: AssetImage('images/sushi.jpeg'),
+            fit: BoxFit.contain,
           ),
           borderRadius: BorderRadius.all(Radius.circular((10.0))),
         ),
@@ -30,15 +29,15 @@ class Card1 extends StatelessWidget {
               child: Text(categroy,
                   style: const TextStyle(
                       fontSize: 25,
-                      color: Colors.white,
+                      color: Colors.orangeAccent,
                       fontWeight: FontWeight.bold)),
             ),
             Positioned(
-              top: 20,
+              top: 30,
               right: 0,
               child: Text(
                 title,
-                style: TextStyle(fontSize: 20, color: Colors.blue),
+                style: TextStyle(fontSize: 20, color: Colors.red[400]),
               ),
             ),
             Positioned(
@@ -46,17 +45,17 @@ class Card1 extends StatelessWidget {
               left: 0,
               child: Text(
                 description,
-                style: TextStyle(fontSize: 23, color: Colors.white),
+                style: TextStyle(fontSize: 22, color: Colors.red),
               ),
             ),
             Positioned(
-              bottom: 10,
+              bottom: 0,
               left: 0,
               child: Text(
                 chef,
-                style: const TextStyle(
+                style: TextStyle(
                     fontSize: 25,
-                    color: Colors.yellowAccent,
+                    color: Colors.green.shade400,
                     fontWeight: FontWeight.bold),
               ),
             ),

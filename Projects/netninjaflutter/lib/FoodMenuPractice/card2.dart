@@ -10,7 +10,7 @@ class Card2 extends StatelessWidget {
       child: Container(
         constraints: const BoxConstraints.expand(width: 350, height: 450),
         decoration: const BoxDecoration(
-          color: Colors.blue,
+          // color: Colors.blue,
           image: DecorationImage(
             image: AssetImage('images/mshake.jpg'),
             fit: BoxFit.cover,

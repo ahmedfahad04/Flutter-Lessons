@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'card1.dart';
 import 'card2.dart';
+import 'card3.dart';
 
-// 1
+// this is a stateful widget as we need to track the mouse click of bottom
+// navigation bar icon and thereby change the windows
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
   @override
@@ -15,20 +17,23 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     const Card1(),
     const Card2(),
-    Container(color: Colors.blue),
+    const Card3(),
+    // Container(color: Colors.black),
   ];
 
   void _onItemTapped(int index){
     setState((){
       _selectedIndex = index;
+      print("$_selectedIndex th Icon Pressed");
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.pink.shade50,
       appBar: AppBar(
-        title: const Text('Fooderlich'),
+        title: const Text('Fooderlich!'),
         centerTitle: true,
       ),
       body: pages[_selectedIndex],

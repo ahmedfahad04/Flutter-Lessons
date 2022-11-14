@@ -15,7 +15,6 @@ class Main extends StatelessWidget {
           color: Colors.pink[800],
         )
       ),
-      title: 'Fooderlich',
       home: const Home(),
     );
   }
