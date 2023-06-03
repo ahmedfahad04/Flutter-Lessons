@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> _launchURL(String url) async {
     final Uri uri = Uri(host: url);
-    if(!await launchUrl(
+    if (!await launchUrl(
       uri,
       mode: LaunchMode.inAppWebView,
     )) {
@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                 // TODO 8: adding Sliding menu
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue[900],
+                  backgroundColor: Colors.blue[900],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0),
                   ),
@@ -80,31 +80,55 @@ class _MyAppState extends State<MyApp> {
                   showModalBottomSheet(
                     context: context,
                     shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(top:Radius.circular(15)),
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(15)),
                     ),
                     builder: (context) => SingleChildScrollView(
                       child: Column(
                         children: [
                           ListTile(
-                            title: Text('Get a meeting link to share', style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.values[4]),),
+                            title: Text(
+                              'Get a meeting link to share',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.values[4]),
+                            ),
                             leading: Icon(Icons.link, color: Colors.black),
                             onLongPress: () {},
                           ),
                           ListTile(
-                            title: Text('Start an instant meeting', style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.values[4]),),
-                            leading: Icon(Icons.videocam_outlined, color: Colors.black),
+                            title: Text(
+                              'Start an instant meeting',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.values[4]),
+                            ),
+                            leading: Icon(Icons.videocam_outlined,
+                                color: Colors.black),
                             onTap: () async {
                               //TODO 9: URL not working properly..
-                              _launchURL('https://stackoverflow.com/questions/61216047/is-there-direct-api-for-google-meet');
+                              _launchURL(
+                                  'https://stackoverflow.com/questions/61216047/is-there-direct-api-for-google-meet');
                             },
                           ),
                           ListTile(
-                            title: Text('Schedule in Google Calendar', style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.values[4]),),
-                            leading: Icon(Icons.calendar_today, color: Colors.black),
+                            title: Text(
+                              'Schedule in Google Calendar',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.values[4]),
+                            ),
+                            leading:
+                                Icon(Icons.calendar_today, color: Colors.black),
                             onTap: () {},
                           ),
                           ListTile(
-                            title: Text('Close', style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.values[4]),),
+                            title: Text(
+                              'Close',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.values[4]),
+                            ),
                             leading: Icon(Icons.close, color: Colors.black),
                             onTap: () {
                               Navigator.pop(context);
@@ -131,7 +155,9 @@ class _MyAppState extends State<MyApp> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (builder) => const Window1()), //TODO 7: Adding page switching animation
+                    MaterialPageRoute(
+                        builder: (builder) =>
+                            const Window1()), //TODO 7: Adding page switching animation
                   );
                 },
                 child: Text(

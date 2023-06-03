@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'dashboard.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp())); // this material App is a must to switch between pages
+  runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyApp())); // this material App is a must to switch between pages
 }
 
 class MyApp extends StatelessWidget {
@@ -42,8 +44,7 @@ class MyApp extends StatelessWidget {
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
-              side: const BorderSide(width: 3.0, color: Colors.red),
-              primary: Colors.red,
+              foregroundColor: Colors.red, side: const BorderSide(width: 3.0, color: Colors.red),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(22.0)),
               minimumSize: const Size(250, 50), //////// HERE
@@ -102,9 +103,9 @@ class MyApp extends StatelessWidget {
               ),
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.red,
                   backgroundColor: Color(0xFFF5F4EB),
                   side: const BorderSide(width: 0.0, color: Colors.white),
-                  primary: Colors.red,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(22.0)),
                   minimumSize: const Size(20, 40), //////// HERE
